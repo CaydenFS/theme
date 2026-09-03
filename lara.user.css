@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.5.7
+@version     1.5.9
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -1764,6 +1764,22 @@
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/reports.php") {
     tr:first-child {
         background-color: var(--maincolor);
+    }
+    /* Month navigation row: force readable link text on any color scheme.
+       High-specificity + href match so it beats the global `a{color:var(--maincolor)}` rule. */
+    tr:first-child td a[href*="reports.php"],
+    tr:first-child td a[href*="month="],
+    table tr:first-child td a,
+    tr:first-child td a.hidden-print {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        text-decoration: underline !important;
+    }
+    tr:first-child td a[href*="reports.php"]:hover,
+    tr:first-child td a[href*="month="]:hover,
+    tr:first-child td a.hidden-print:hover {
+        color: #ffffff !important;
+        text-decoration: none !important;
     }
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
         border-top: 1px solid #48484894;
