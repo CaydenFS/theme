@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.6.0
+@version     1.6.1
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -1806,16 +1806,25 @@
     }
 }
 
-@-moz-document url-prefix("https://billing.fiberstate.com/admin/ordersadd.php") {
-    /* Order Summary box: subtotal/total rows use light inline/default backgrounds,
-       making red or white text unreadable. Force dark cells + readable text. */
-    #ordersummary table tr.subtotal td,
-    #ordersummary table tr.total td {
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/orders.php") {
+    /* minFraud "Fraud Check Results": .table-striped light rows make red/white text
+       unreadable. Kill striping, force dark cells and readable text. */
+    .order-fraud-check-results .table > tbody > tr > td,
+    .order-fraud-check-results .table > tbody > tr:nth-of-type(odd) > td,
+    .order-fraud-check-results .table > tbody > tr:nth-of-type(even) > td,
+    .order-fraud-check-results .table-striped > tbody > tr:nth-of-type(odd),
+    .order-fraud-check-results .table-striped > tbody > tr:nth-of-type(even) {
         background-color: #2d2d2d !important;
         color: #ffffff !important;
     }
-    #ordersummary table tr.subtotal td a,
-    #ordersummary table tr.total td a {
+    .order-fraud-check-results .panel-body .table > tbody > tr:nth-of-type(even) > td {
+        background-color: #272727 !important;
+    }
+    .order-fraud-check-results .table td a {
         color: var(--maincolorlighter) !important;
+    }
+    /* labels sometimes render as .label spans here too */
+    .order-fraud-check-results .label {
+        color: #ffffff !important;
     }
 }
