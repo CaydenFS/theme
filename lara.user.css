@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.7.2
+@version     1.6.2
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -23,7 +23,9 @@
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/") {
+    /*[[color-scheme]]*/
 
+    /* Fix unreadable red-on-red labels across admin (minFraud output, order views, etc.) */
     .label-info,
     .label-success,
     .label-primary,
@@ -34,39 +36,14 @@
     a.label {
         color: #fff !important;
     }
-
-    td[style*="background-color:#fff"],   td[style*="background-color: #fff"],
-    td[style*="background-color:#ffffff"],td[style*="background-color:#FFFFFF"],
-    td[style*="background-color:#FFF"],
-    td[style*="background-color:#efefef"],td[style*="background-color:#EFEFEF"],
-    td[style*="background-color:#f6f6f6"],td[style*="background-color:#F6F6F6"],
-    td[style*="background-color:#f9f9f9"],td[style*="background-color:#F9F9F9"],
-    td[style*="background-color:#fafafa"],td[style*="background-color:#FAFAFA"],
-    td[style*="background-color:#eff2f9"],td[style*="background-color:#EFF2F9"],
-    td[style*="background-color:#fdf4e8"],td[style*="background-color:#FDF4E8"],
-    td[style*="background-color:#f5f5f5"],td[style*="background-color:#F5F5F5"],
-    td[style*="background:#fff"],         td[style*="background: #fff"],
-    tr[style*="background-color:#fff"],   tr[style*="background-color:#ffffff"],
-    tr[style*="background-color:#efefef"],tr[style*="background-color:#EFEFEF"],
-    div[style*="background-color:#fff"],  div[style*="background-color:#ffffff"],
-    div[style*="background-color:#f6f6f6"],div[style*="background-color:#efefef"],
-    td[bgcolor="#efefef"], td[bgcolor="#ffffff"], td[bgcolor="#FFFFFF"],
-    tr[bgcolor="#ffffff"], tr[bgcolor="#efefef"] {
-        background-color: #2d2d2d !important;
-        color: #e8e8e8 !important;
-    }
-    td[style*="background-color:#fff"] a,   td[style*="background-color:#ffffff"] a,
-    td[style*="background-color:#efefef"] a,td[style*="background-color:#f6f6f6"] a,
-    td[style*="background-color:#fdf4e8"] a,td[style*="background-color:#EFF2F9"] a,
-    div[style*="background-color:#fff"] a,  tr[bgcolor="#ffffff"] a {
-        color: var(--maincolorlighter) !important;
-    }
-
+    
     ::selection {
         background-color: var(--maincolor);
         color: white;
     }
-
+    
+    
+    
     h1,
     h2,
     h3,
@@ -75,17 +52,17 @@
     h6 {
         color: #fff;
     }
-
+    
     a {
         color: var(--maincolor);
         transition: 0.2s all ease-in-out;
     }
-
+    
     body {
         background-color: #202020;
         color: #fff;
     }
-
+    
     button, input, select, textarea {
         background-color: #2d2d2d;
         border-color: #48484894;
@@ -97,17 +74,17 @@
         outline: none;
         border-color: var(--maincolor);
     }
-
+    
     a:hover {
         color: var(--maincolorlighter);
     }
-
+       
     a:hover, a:active, a:focus {
         outline: none;
         text-decoration: none;
         color: var(--maincolorevenlighter);
     }
-
+       
     code {
         padding: 2px 5px;
         font-size: 90%;
@@ -115,7 +92,7 @@
         background-color: #ffffff0f;
         border-radius: 6px;
     }
-
+    
     #inputIntelliSearchValue {
         border: none !important;
         border-top-left-radius: 10px !important;
@@ -123,18 +100,19 @@
         border-top-right-radius: 0px !important;
         border-bottom-right-radius: 0px !important;
     }
-
+    
+    
     .control-sidebar-dark {
         color: #c3c3c3;
     }
-
+    
     .main-footer {
         background: #252525;
         padding: 15px;
         color: #fff;
         border-top: 1px solid #48484894;
     }
-
+    
     .intl-tel-input .country-list {
         position: absolute;
         z-index: 2;
@@ -156,27 +134,27 @@
     .intl-tel-input .country-list .country.highlight {
         background-color: var(--maincolor);
     }
-
+    
     h2 {
         color: #fff;
         font-size: 18px;
         font-weight: 400;
         margin: 10px 0 15px 0;
     }
-
+    
     .content-header > h1 {
         margin: 0;
         font-size: 30px;
         color: #ffffff;
     }
-
+    
     .content-wrapper,
     .right-side {
       min-height: 100%;
       background-color: #202020;
       z-index: 800;
     }
-
+    
     ul.admin-tabs>li>a, ul.client-tabs>li>a {
         margin-left: 6px;
         padding: 5px 9px 5px;
@@ -187,7 +165,7 @@
         transition: 0.2s all ease-in-out;
         font-size: 14px;
     }
-
+    
     ul.admin-tabs>li>a:hover, ul.client-tabs>li>a:hover {
         border: 1px solid #ccc;
         text-decoration: none;
@@ -196,16 +174,16 @@
         color: #fff;
         background: var(--maincolor);
     }
-
+    
     .control-sidebar-dark, .control-sidebar-dark + .control-sidebar-bg {
         background: #2d2d2d;
     }
-
+    
     .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li.active > a, .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li.active > a:hover, .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li.active > a:focus,   .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li.active > a:active {
         background: #2d2d2d;
         color: #fff;
     }
-
+    
     .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li > a, .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li > a:hover, .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li > a:focus {
         border-left-color: #3e3e3e;
         border-bottom-color: var(--maincolor);
@@ -226,17 +204,17 @@
         color: #fff;
         background-color: #2d2d2d;
     }
-
+    
     input.btn.btn-warning:hover {
         background-color: var(--maincolorlighter);
     }
     input.btn.btn-warning {
-        background-color: var(--maincolor);
+        background-color: var(--maincolor);/*********************************************************************************************************************/
         border-color: var(--maincolor);
         font-size: 17px;
         transition: 0.2s all ease-in-out;
     }
-
+       
     input.btn.btn-warning:hover, input.btn.btn-warning:active {
         background-color: var(--maincolordarker);
         border-color: var(--maincolortransparent);
@@ -246,7 +224,7 @@
         background-color: var(--maincolordarker);
         border-color: var(--maincolortransparent);
     }
-
+    
     .control-sidebar-dark .control-sidebar-menu > li > a:hover {
         background: #383838;
         box-shadow: 0px 6px 16px 0px #252525;
@@ -257,11 +235,11 @@
         padding: 10px 15px;
         transition: 0.2s all ease-in-out;
     }
-
+    
     div > form > .form-group {
         margin-top: 10px;
     }
-
+    /* START YELLOW */
     .skin-yellow .sidebar a {
         color: #c3c3c3;
     }
@@ -297,7 +275,9 @@
         border: 1px solid transparent;
         height: 35px;
     }
-
+    /* END YELLOW */
+    
+    /* START PURPLE */
     .skin-purple .sidebar a {
         color: #c3c3c3;
     }
@@ -351,7 +331,9 @@
     .skin-purple .main-header .navbar .sidebar-toggle:hover {
         background-color: var(--logopart);
     }
-
+    /* END PURPLE */
+    
+    /* START BLUE */
     .skin-blue .sidebar a {
         color: #c3c3c3;
     }
@@ -405,7 +387,9 @@
     .skin-blue .main-header .navbar .sidebar-toggle:hover {
         background-color: var(--logopart);
     }
-
+    /* END BLUE */
+    
+    /* START RED */
     .skin-red .sidebar a {
         color: #c3c3c3;
     }
@@ -459,7 +443,9 @@
     .skin-red .main-header .navbar .sidebar-toggle:hover {
         background-color: var(--logopart);
     }
-
+    /* END RED */
+    
+    /* START GREEN */
     .skin-green .sidebar a {
         color: #c3c3c3;
     }
@@ -513,11 +499,12 @@
     .skin-green .main-header .navbar .sidebar-toggle:hover {
         background-color: var(--logopart);
     }
-
+    /* END GREEN */
+    
     li.treeview.active > a#Menu-Support {
         transition: 0.1s all ease-in-out;
     }
-
+    
     div.admin-tabs>.active, div.client-tabs>.active {
         padding: 10px;
         border: 1px solid #48484894;
@@ -724,7 +711,7 @@
         appearance: none;
         cursor: pointer;
     }
-
+    
     .selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
         cursor: default;
         background-color: #2d2d2d;
@@ -829,7 +816,8 @@
         color: #c7c7c7;
         background: #191919!important;
     }
-
+    
+    /* OUTSIDE OF TICKET SYSTEM */
     .control-sidebar-bg {
         box-shadow: 0 0 10px #191919;
     }
@@ -1369,7 +1357,8 @@
         background-color: var(--maincolordarker);
         border-color: var(--maincolortransparent);
     }
-
+    
+    /* SUPPORT OVERVIEW SPECIFIC */
     div[style="background-color:#f6f6f6;padding:5px 15px;"] {
         background-color: #2d2d2d !important;
     }
@@ -1394,7 +1383,8 @@
         font-family: monospace;
         color: var(--maincolor);
     }
-
+    
+    /* STAFF NOTICEBOARD */
     .staffboardnotices div.green {
         background-color: #50863f;
     }
@@ -1414,11 +1404,13 @@
     .staffboardnotices div.purple {
         background-color: #6a4e92;
     }
-
+    
+    /* TABLES */
     table.datatable td[style="background-color:#EFF2F9;text-align:center;"] {
         background-color: #2d2d2d !important;
     }
-
+    
+    /* CALENDSRS */
     .daterangepicker {
         background-color: #2d2d2d;
         font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
@@ -1506,11 +1498,13 @@
     .daterangepicker td.off, .daterangepicker td.off.end-date, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date {
         background-color: #202020;
     }
-
+    
+    /* INVOICES */
     div[style="width:25%;float:right;line-height:22px;"] {
         line-height: 40px !important;
     }
-
+    
+    /* REPORTS */
     .report-filters-wrapper {
         margin: 20px auto 0;
         padding: 20px;
@@ -1518,7 +1512,7 @@
         border-top: 1px solid #48484894;
         border-radius: 10px;
     }
-
+    
 }
 
 @-moz-document url("https://billing.fiberstate.com/admin/addonmodules.php?module=fraudrecord&action=report") {
@@ -1718,7 +1712,7 @@
         filter: var(--huerotate);
         max-width: 170px;
     }
-
+    
 }
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/configproductoptions.php") {
     .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
@@ -1728,7 +1722,7 @@
         border-top: 1px solid #48484894;
         background-color: #2d2d2d;
     }
-
+    
 }
 
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/clientsupgrade.php") {
@@ -1764,7 +1758,7 @@
     input[type="submit"]:focus {
         outline: none;
     }
-
+    
 }
 
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/reports.php") {
@@ -1797,7 +1791,7 @@
 }
 
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/configaddonmods.php") {
-
+    /* Addon modules table: cells carry inline background-color:#fff, making red/dark text unreadable */
     td[style*="background-color:#fff"],
     td[style*="background-color: #fff"],
     td[style*="background-color:#ffffff"],
@@ -1809,5 +1803,28 @@
     td[style*="background-color: #fff"] a,
     td[style*="background-color:#ffffff"] a {
         color: var(--maincolorlighter) !important;
+    }
+}
+
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/orders.php") {
+    /* minFraud "Fraud Check Results": .table-striped light rows make red/white text
+       unreadable. Kill striping, force dark cells and readable text. */
+    .order-fraud-check-results .table > tbody > tr > td,
+    .order-fraud-check-results .table > tbody > tr:nth-of-type(odd) > td,
+    .order-fraud-check-results .table > tbody > tr:nth-of-type(even) > td,
+    .order-fraud-check-results .table-striped > tbody > tr:nth-of-type(odd),
+    .order-fraud-check-results .table-striped > tbody > tr:nth-of-type(even) {
+        background-color: #2d2d2d !important;
+        color: #ffffff !important;
+    }
+    .order-fraud-check-results .panel-body .table > tbody > tr:nth-of-type(even) > td {
+        background-color: #272727 !important;
+    }
+    .order-fraud-check-results .table td a {
+        color: var(--maincolorlighter) !important;
+    }
+    /* labels sometimes render as .label spans here too */
+    .order-fraud-check-results .label {
+        color: #ffffff !important;
     }
 }
