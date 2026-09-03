@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.6.2
+@version     1.7.0
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -36,6 +36,82 @@
     a.label {
         color: #fff !important;
     }
+
+    /* =====================================================================
+       GLOBAL READABILITY SAFETY NET (broad)
+       Catches WHMCS pages that hardcode light backgrounds (inline or via
+       Bootstrap striping/bg helpers) which the theme has not specifically
+       restyled, causing light-on-light or red-on-light text. Placed high in
+       the block so page-specific rules below can still override it.
+       ===================================================================== */
+
+    /* 1. Inline light backgrounds on cells/rows/divs -> dark + readable */
+    td[style*="background-color:#fff"],   td[style*="background-color: #fff"],
+    td[style*="background-color:#ffffff"],td[style*="background-color:#FFFFFF"],
+    td[style*="background-color:#FFF"],
+    td[style*="background-color:#efefef"],td[style*="background-color:#EFEFEF"],
+    td[style*="background-color:#f6f6f6"],td[style*="background-color:#F6F6F6"],
+    td[style*="background-color:#f9f9f9"],td[style*="background-color:#F9F9F9"],
+    td[style*="background-color:#fafafa"],td[style*="background-color:#FAFAFA"],
+    td[style*="background-color:#eff2f9"],td[style*="background-color:#EFF2F9"],
+    td[style*="background-color:#fdf4e8"],td[style*="background-color:#FDF4E8"],
+    td[style*="background-color:#f5f5f5"],td[style*="background-color:#F5F5F5"],
+    td[style*="background:#fff"],         td[style*="background: #fff"],
+    tr[style*="background-color:#fff"],   tr[style*="background-color:#ffffff"],
+    tr[style*="background-color:#efefef"],tr[style*="background-color:#EFEFEF"],
+    div[style*="background-color:#fff"],  div[style*="background-color:#ffffff"],
+    div[style*="background-color:#f6f6f6"],div[style*="background-color:#efefef"],
+    td[bgcolor="#efefef"], td[bgcolor="#ffffff"], td[bgcolor="#FFFFFF"],
+    tr[bgcolor="#ffffff"], tr[bgcolor="#efefef"] {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+    }
+    td[style*="background-color:#fff"] a,   td[style*="background-color:#ffffff"] a,
+    td[style*="background-color:#efefef"] a,td[style*="background-color:#f6f6f6"] a,
+    td[style*="background-color:#fdf4e8"] a,td[style*="background-color:#EFF2F9"] a,
+    div[style*="background-color:#fff"] a,  tr[bgcolor="#ffffff"] a {
+        color: var(--maincolorlighter) !important;
+    }
+
+    /* 2. Bootstrap striped tables: neutralize the light odd/even rows everywhere */
+    .table-striped > tbody > tr:nth-of-type(odd) > td,
+    .table-striped > tbody > tr:nth-of-type(odd) > th {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+    }
+    .table-striped > tbody > tr:nth-of-type(even) > td,
+    .table-striped > tbody > tr:nth-of-type(even) > th {
+        background-color: #272727 !important;
+        color: #e8e8e8 !important;
+    }
+    .table-striped > tbody > tr > td a,
+    .table-striped > tbody > tr > th a {
+        color: var(--maincolorlighter) !important;
+    }
+
+    /* 3. Bootstrap contextual row/cell background helpers -> dark, readable */
+    .table > tbody > tr.active > td,   .table > tbody > tr > td.active,
+    .table > tbody > tr.success > td,  .table > tbody > tr > td.success,
+    .table > tbody > tr.info > td,     .table > tbody > tr > td.info,
+    .table > tbody > tr.warning > td,  .table > tbody > tr > td.warning,
+    .table > tbody > tr.danger > td,   .table > tbody > tr > td.danger,
+    .bg-white, .bg-gray, .bg-gray-light {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+    }
+
+    /* 4. Labels/badges: guarantee readable text on every variant (colors set elsewhere) */
+    .label, span.label, a.label, .badge, span.badge, a.badge {
+        color: #fff !important;
+    }
+
+    /* 5. Well / thumbnail / panel default light containers */
+    .well, .thumbnail, .jumbotron {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+        border-color: #48484894 !important;
+    }
+    /* END GLOBAL READABILITY SAFETY NET */
     
     ::selection {
         background-color: var(--maincolor);
@@ -1803,28 +1879,5 @@
     td[style*="background-color: #fff"] a,
     td[style*="background-color:#ffffff"] a {
         color: var(--maincolorlighter) !important;
-    }
-}
-
-@-moz-document url-prefix("https://billing.fiberstate.com/admin/orders.php") {
-    /* minFraud "Fraud Check Results": .table-striped light rows make red/white text
-       unreadable. Kill striping, force dark cells and readable text. */
-    .order-fraud-check-results .table > tbody > tr > td,
-    .order-fraud-check-results .table > tbody > tr:nth-of-type(odd) > td,
-    .order-fraud-check-results .table > tbody > tr:nth-of-type(even) > td,
-    .order-fraud-check-results .table-striped > tbody > tr:nth-of-type(odd),
-    .order-fraud-check-results .table-striped > tbody > tr:nth-of-type(even) {
-        background-color: #2d2d2d !important;
-        color: #ffffff !important;
-    }
-    .order-fraud-check-results .panel-body .table > tbody > tr:nth-of-type(even) > td {
-        background-color: #272727 !important;
-    }
-    .order-fraud-check-results .table td a {
-        color: var(--maincolorlighter) !important;
-    }
-    /* labels sometimes render as .label spans here too */
-    .order-fraud-check-results .label {
-        color: #ffffff !important;
     }
 }
