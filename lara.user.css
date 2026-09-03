@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.7.1
+@version     1.7.2
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -60,41 +60,6 @@
     td[style*="background-color:#fdf4e8"] a,td[style*="background-color:#EFF2F9"] a,
     div[style*="background-color:#fff"] a,  tr[bgcolor="#ffffff"] a {
         color: var(--maincolorlighter) !important;
-    }
-
-    .table-striped > tbody > tr:nth-of-type(odd) > td,
-    .table-striped > tbody > tr:nth-of-type(odd) > th {
-        background-color: #2d2d2d !important;
-        color: #e8e8e8 !important;
-    }
-    .table-striped > tbody > tr:nth-of-type(even) > td,
-    .table-striped > tbody > tr:nth-of-type(even) > th {
-        background-color: #272727 !important;
-        color: #e8e8e8 !important;
-    }
-    .table-striped > tbody > tr > td a,
-    .table-striped > tbody > tr > th a {
-        color: var(--maincolorlighter) !important;
-    }
-
-    .table > tbody > tr.active > td,   .table > tbody > tr > td.active,
-    .table > tbody > tr.success > td,  .table > tbody > tr > td.success,
-    .table > tbody > tr.info > td,     .table > tbody > tr > td.info,
-    .table > tbody > tr.warning > td,  .table > tbody > tr > td.warning,
-    .table > tbody > tr.danger > td,   .table > tbody > tr > td.danger,
-    .bg-white, .bg-gray, .bg-gray-light {
-        background-color: #2d2d2d !important;
-        color: #e8e8e8 !important;
-    }
-
-    .label, span.label, a.label, .badge, span.badge, a.badge {
-        color: #fff !important;
-    }
-
-    .well, .thumbnail, .jumbotron {
-        background-color: #2d2d2d !important;
-        color: #e8e8e8 !important;
-        border-color: #48484894 !important;
     }
 
     ::selection {
