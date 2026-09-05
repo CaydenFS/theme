@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.6.4
+@version     1.6.5
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -1830,14 +1830,16 @@
 }
 
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/configproducts.php") {
-    td[style*="f3f3f3"] {
-        background-color: #2d2d2d !important;
-    }
+    td[style*="f3f3f3"],
     td[style*="F3F3F3"] {
-        background-color: #2d2d2d !important;
+        background-color: #252525 !important;
+        border-top: 2px solid var(--maincolor) !important;
+        border-bottom: 1px solid #48484894 !important;
     }
     .prodGroup {
         color: #ffffff !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
     }
     .prodGroup a {
         color: var(--maincolorlighter) !important;
