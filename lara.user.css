@@ -1830,19 +1830,22 @@
 }
 
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/products.php") {
-    /* Product group header row: cells carry inline background-color:#f3f3f3,
-       making the group name text hard to read on the dark theme. */
-    td[style*="background-color:#f3f3f3"],
-    td[style*="background-color: #f3f3f3"],
-    td[style*="background-color:#F3F3F3"] {
+    /* Product group header row renders with a light inline background,
+       making the group name hard to read on the dark theme. Target the
+       group cell/label directly so it catches regardless of inline format. */
+    table.datatable td:has(.prodGroup),
+    td[style*="f3f3f3"],
+    td[style*="F3F3F3"] {
         background-color: #2d2d2d !important;
     }
-    td[style*="background-color:#f3f3f3"] .prodGroup,
-    td[style*="background-color: #f3f3f3"] .prodGroup {
+    .prodGroup {
         color: #ffffff !important;
     }
-    td[style*="background-color:#f3f3f3"] .prodGroup a,
-    td[style*="background-color: #f3f3f3"] .prodGroup a {
+    .prodGroup a {
         color: var(--maincolorlighter) !important;
+    }
+    /* Group rows sit inside sortable group tables; kill any light row bg */
+    table.datatable.sort-groups > tbody > tr > td {
+        background-color: #2d2d2d !important;
     }
 }
