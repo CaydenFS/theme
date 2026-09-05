@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.6.2
+@version     1.6.3
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -1826,5 +1826,23 @@
     /* labels sometimes render as .label spans here too */
     .order-fraud-check-results .label {
         color: #ffffff !important;
+    }
+}
+
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/products.php") {
+    /* Product group header row: cells carry inline background-color:#f3f3f3,
+       making the group name text hard to read on the dark theme. */
+    td[style*="background-color:#f3f3f3"],
+    td[style*="background-color: #f3f3f3"],
+    td[style*="background-color:#F3F3F3"] {
+        background-color: #2d2d2d !important;
+    }
+    td[style*="background-color:#f3f3f3"] .prodGroup,
+    td[style*="background-color: #f3f3f3"] .prodGroup {
+        color: #ffffff !important;
+    }
+    td[style*="background-color:#f3f3f3"] .prodGroup a,
+    td[style*="background-color: #f3f3f3"] .prodGroup a {
+        color: var(--maincolorlighter) !important;
     }
 }
