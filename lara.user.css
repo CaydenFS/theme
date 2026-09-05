@@ -1829,14 +1829,11 @@
     }
 }
 
-@-moz-document url-prefix("https://billing.fiberstate.com/admin/products.php") {
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/configproducts.php") {
     td[style*="f3f3f3"] {
         background-color: #2d2d2d !important;
     }
     td[style*="F3F3F3"] {
-        background-color: #2d2d2d !important;
-    }
-    table.datatable.sort-groups > tbody > tr > td {
         background-color: #2d2d2d !important;
     }
     .prodGroup {
