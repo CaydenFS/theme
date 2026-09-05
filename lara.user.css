@@ -1830,12 +1830,13 @@
 }
 
 @-moz-document url-prefix("https://billing.fiberstate.com/admin/products.php") {
-    /* Product group header row renders with a light inline background,
-       making the group name hard to read on the dark theme. Target the
-       group cell/label directly so it catches regardless of inline format. */
-    table.datatable td:has(.prodGroup),
-    td[style*="f3f3f3"],
+    td[style*="f3f3f3"] {
+        background-color: #2d2d2d !important;
+    }
     td[style*="F3F3F3"] {
+        background-color: #2d2d2d !important;
+    }
+    table.datatable.sort-groups > tbody > tr > td {
         background-color: #2d2d2d !important;
     }
     .prodGroup {
@@ -1843,9 +1844,5 @@
     }
     .prodGroup a {
         color: var(--maincolorlighter) !important;
-    }
-    /* Group rows sit inside sortable group tables; kill any light row bg */
-    table.datatable.sort-groups > tbody > tr > td {
-        background-color: #2d2d2d !important;
     }
 }
