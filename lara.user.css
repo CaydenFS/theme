@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.6.5
+@version     1.6.6
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -1843,5 +1843,24 @@
     }
     .prodGroup a {
         color: var(--maincolorlighter) !important;
+    }
+}
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/supporttickets.php") {
+    .markdown-content table {
+        background-color: #2d2d2d !important;
+        border: 1px solid #48484894 !important;
+    }
+    .markdown-content table th {
+        background-color: #252525 !important;
+        color: #ffffff !important;
+        border: 1px solid #48484894 !important;
+    }
+    .markdown-content table td {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+        border: 1px solid #48484894 !important;
+    }
+    .markdown-content table tr:nth-child(even) td {
+        background-color: #272727 !important;
     }
 }
