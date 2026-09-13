@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.6.6
+@version     1.6.7
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://raw.githubusercontent.com/CaydenFS/theme/main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -1862,5 +1862,24 @@
     }
     .markdown-content table tr:nth-child(even) td {
         background-color: #272727 !important;
+    }
+}
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/ordersadd.php") {
+    #ordersummary table tr.subtotal td,
+    #ordersummary table tr.total td,
+    #ordersummary table tr.recurring td,
+    #ordersummary table tr.setup td {
+        background-color: #2d2d2d !important;
+        color: #ffffff !important;
+        border-color: #48484894 !important;
+    }
+    #ordersummary table tr.total td {
+        background-color: #252525 !important;
+        border-top: 2px solid var(--maincolor) !important;
+        font-weight: 700 !important;
+    }
+    #ordersummary .panel,
+    #ordersummary .panel-body {
+        background-color: #202020 !important;
     }
 }
