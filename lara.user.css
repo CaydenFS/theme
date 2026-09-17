@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.6.8
+@version     1.6.9
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://cdn.jsdelivr.net/gh/CaydenFS/theme@main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -1878,6 +1878,19 @@
     }
     #ordersummary table tr.recurring td:first-child {
         border-left: 3px solid var(--maincolortransparent) !important;
+    }
+      #ordersummary .apply-credit-container {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+        border-left: 3px solid var(--maincolortransparent) !important;
+    }
+    #ordersummary .apply-credit-container p,
+    #ordersummary .apply-credit-container label,
+    #ordersummary .apply-credit-container span {
+        color: #e8e8e8 !important;
+    }
+    #ordersummary tr.apply-credit td {
+        background-color: #2d2d2d !important;
     }
     #ordersummary table tr.total td {
         background-color: #252525 !important;
