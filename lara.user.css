@@ -1907,3 +1907,28 @@
         background-color: #202020 !important;
     }
 }
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/configgeneral.php") {
+    .system-settings-index a.setting,
+    .setup-links-container a.setting {
+        background-color: #2d2d2d !important;
+        border: 1px solid #48484894 !important;
+        color: #e8e8e8 !important;
+        transition: 0.2s all ease-in-out !important;
+    }
+    .system-settings-index a.setting:hover,
+    .setup-links-container a.setting:hover {
+        background-color: #383838 !important;
+        border-color: var(--maincolor) !important;
+    }
+    .system-settings-index a.setting .content,
+    .setup-links-container a.setting .content {
+        color: #e8e8e8 !important;
+    }
+    .system-settings-index a.setting .icon,
+    .setup-links-container a.setting .icon {
+        color: #ffffffb3 !important;
+    }
+    .system-settings-index a.setting:hover .icon {
+        color: var(--maincolor) !important;
+    }
+}
