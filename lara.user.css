@@ -1932,3 +1932,12 @@
         color: var(--maincolor) !important;
     }
 }
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/clientsservices.php") {
+    .selectize-input .item[style*="FFFFCC"],
+    .selectize-input .item[style*="ffffcc"] {
+        background-color: #2d2d2d !important;
+    }
+    .selectize-input .item .name {
+        color: #e8e8e8 !important;
+    }
+}
