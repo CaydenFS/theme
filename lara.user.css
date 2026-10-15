@@ -1737,6 +1737,18 @@
         outline: none;
         border-color: var(--maincolor);
     }
+    form#upgradefrm table.form td.fieldlabel {
+        color: #e8e8e8 !important;
+    }
+    form#upgradefrm table.form td.fieldarea {
+        color: #e8e8e8 !important;
+    }
+    form#upgradefrm table.form td.fieldarea select,
+    form#upgradefrm table.form td.fieldarea input {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+        border-color: #48484894 !important;
+    }
     input[type="submit"] {
         background-color: #2d2d2d;
         border-style: solid;
