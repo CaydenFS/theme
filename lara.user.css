@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Lara Theme Dark
 @namespace   Fiber State
-@version     1.6.14
+@version     1.6.15
 @homepageURL https://billing.fiberstate.com
 @updateURL   https://cdn.jsdelivr.net/gh/CaydenFS/theme@main/lara.user.css
 @license     CC-BY-SA-4.0
@@ -1967,6 +1967,28 @@
         background-color: #2d2d2d !important;
     }
     .selectize-input .item .name {
+        color: #e8e8e8 !important;
+    }
+}
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/clientsservices.php") {
+    #upgradefrm table.form td.fieldlabel,
+    .modal-body #upgradefrm table.form td.fieldlabel {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+    }
+    #upgradefrm table.form td.fieldarea,
+    .modal-body #upgradefrm table.form td.fieldarea {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+    }
+    #upgradefrm table.form td.fieldarea select,
+    #upgradefrm table.form td.fieldarea input {
+        background-color: #2d2d2d !important;
+        color: #e8e8e8 !important;
+        border-color: #48484894 !important;
+    }
+    #upgradefrm .fieldlabel,
+    #upgradefrm label {
         color: #e8e8e8 !important;
     }
 }
