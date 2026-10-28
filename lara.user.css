@@ -1993,21 +1993,21 @@
     }
 }
 
-@-moz-document url-prefix("https://billing.fiberstate.com/admin/clientssummary.php") {
+@-moz-document url-prefix("https://billing.fiberstate.com/admin/index.php") {
     #modalAjax .modal-body,
     #modalAjax .panel-body,
     .whmcs-modal .modal-body {
-        color: #e8e8e8 !important;
+        color: #ffffff !important;
     }
     #modalAjax .control-label,
     .whmcs-modal .control-label {
-        color: #c3c3c3 !important;
+        color: #ffffff !important;
     }
     #modalAjax .checkbox-inline,
     #modalAjax label.checkbox-inline,
     .whmcs-modal .checkbox-inline,
     #frmManageUser label {
-        color: #e8e8e8 !important;
+        color: #ffffff !important;
         opacity: 1 !important;
     }
     #modalAjax input[type="checkbox"]:disabled,
